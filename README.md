@@ -1,4 +1,4 @@
-# `Obtaining the weather since an API`
+# `Obtaining the Weather since an API`
 
 _The project consists of doing the following:_
 
@@ -12,7 +12,7 @@ _4.-Displaying the results of the API in the DOM and verifying there are results
 
 _5.-Documenting the App._
 
-_- Have been used **Functional Components**, **Hooks useState & useEffect**, **PropTypes**and **Fetch API + Async/Await** in this project._
+_- Have been used **Functional Components**, **Hooks useState & useEffect**, **PropTypes** and  **Fetch API + Async/Await** in this project._
 
 
 ## Settings 🔧
