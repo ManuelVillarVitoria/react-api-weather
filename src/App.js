@@ -1,6 +1,7 @@
 import React, { Fragment, useState, useEffect } from 'react';
 import Header from './components/Header';
 import Formulario from './components/Formulario';
+import Clima from './components/Clima';
 
 function App() {
 
@@ -11,6 +12,8 @@ const [busqueda, guardarBusqueda] = useState({
 });
 
 const [consultar, guardarConsultar] = useState(false);
+
+const [resultado, guardarResultado] = useState({});
 
 //extraer ciudad y país con destructuring
 const {ciudad, pais} = busqueda;
@@ -28,7 +31,8 @@ useEffect(() => {
       const response = await fetch(url);
       const res = await response.json();
   
-      console.log(res);
+      guardarResultado(res);
+      guardarConsultar(false); //Para hacer múltiples consultas sin necesidad de recargar página.
     }
     consultarAPI();
   }
@@ -52,7 +56,10 @@ useEffect(() => {
                 />
               </div>
               <div className="col m6 s12">
-                2
+                <Clima
+                  resultado={resultado} 
+
+                />
               </div>
             </div>
           </div>
