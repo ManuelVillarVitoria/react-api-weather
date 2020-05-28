@@ -49,14 +49,14 @@ function App() {
     }
     //Para que no nos aparezca un warning que indique que nos falta las dependencias relacionadas con pais y ciudad
     //colocamos el siguiente comentario inferior para desactivar ese warning.
-    
+
     // eslint-disable-next-line 
     },[consultar]);
 
   //Carga condicional de componentes
   let componente;
   if(error) {
-    componente = <Error mensaje="No hay resultados" />
+      componente = <Error mensaje="No hay resultados" />
   } else  {
     componente = <Clima resultado={resultado} />
   }
